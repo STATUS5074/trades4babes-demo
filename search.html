@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Members - Trades4Babes</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="index.html" class="header__logo">
+                <img src="logo.png" alt="Trades4Babes" class="header__logo-img">
+            </a>
+            <nav class="header__nav">
+                <a href="index.html" class="header__link">Home</a>
+                <a href="search.html" class="header__link">Search</a>
+                <a href="marketplace.html" class="header__link">Marketplace</a>
+                <a href="about.html" class="header__link">About</a>
+            </nav>
+            <div class="header__actions" id="header-actions">
+                <a href="login.html" class="btn btn--ghost btn--sm">Log In</a>
+                <a href="register.html" class="btn btn--primary btn--sm">Join Now</a>
+            </div>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="search.html">Search</a>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Log In</a>
+        <a href="register.html">Join Now</a>
+    </nav>
+
+    <section class="section" style="padding-top:140px">
+        <div class="container">
+            <h1 class="section__title">Search Members</h1>
+            <div class="search__filters">
+                <input type="text" class="search__input" placeholder="Search by name, trade, or location..." id="search-input">
+                <select class="search__select" id="trade-filter">
+                    <option value="">All Trades</option>
+                    <option value="plumbing">Plumbing</option>
+                    <option value="electrical">Electrical</option>
+                    <option value="carpentry">Carpentry</option>
+                    <option value="mechanic">Mechanic</option>
+                    <option value="painting">Painting</option>
+                    <option value="handyman">Handyman</option>
+                    <option value="cleaning">Cleaning</option>
+                    <option value="gardening">Gardening</option>
+                    <option value="it">IT / Tech</option>
+                    <option value="massage">Massage</option>
+                </select>
+                <select class="search__select" id="location-filter">
+                    <option value="">All Locations</option>
+                    <option value="sydney">Sydney</option>
+                    <option value="melbourne">Melbourne</option>
+                    <option value="brisbane">Brisbane</option>
+                    <option value="perth">Perth</option>
+                    <option value="adelaide">Adelaide</option>
+                    <option value="goldcoast">Gold Coast</option>
+                </select>
+                <select class="search__select" id="gender-filter">
+                    <option value="">All Genders</option>
+                    <option value="female">Women</option>
+                    <option value="male">Men</option>
+                    <option value="nonbinary">Non-Binary</option>
+                </select>
+                <select class="search__select" id="tier-filter">
+                    <option value="">All Tiers</option>
+                    <option value="verified">Verified</option>
+                    <option value="premium">Premium</option>
+                    <option value="elite">Elite</option>
+                </select>
+            </div>
+            <div class="grid grid--4" id="search-grid"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <img src="logo.png" alt="Trades4Babes" style="width:120px;margin-bottom:20px">
+                    <p style="color:var(--color-text-muted);font-size:0.875rem">Where skills meet desires.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="marketplace.html">Marketplace</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <a href="about.html">Terms & Conditions</a>
+                    <a href="about.html">Privacy Policy</a>
+                    <a href="about.html">Safety Guide</a>
+                </div>
+                <div>
+                    <h4>Support</h4>
+                    <a href="about.html">FAQ</a>
+                    <a href="about.html">Contact</a>
+                    <a href="about.html">Report</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2025 Trades4Babes. All rights reserved. | 18+ Only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
