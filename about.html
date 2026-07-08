@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Trades4Babes - Australia's premium adult directory and trade services marketplace. Learn about our platform, safety, and community guidelines.">
+    <title>About | Trades4Babes</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ========== AGE GATE ========== -->
+<div id="age-gate" class="age-gate">
+    <div class="age-gate__overlay"></div>
+    <div class="age-gate__modal">
+        <div class="age-gate__logo">
+            <img src="logo.png" alt="Trades4Babes Logo" class="age-gate__logo-img">
+        </div>
+        <h2 class="age-gate__title">Age Verification Required</h2>
+        <p class="age-gate__text">
+            This website contains adult content and is restricted to individuals aged 18 years or older. By entering, you confirm that you are of legal age and agree to our Terms & Conditions and Privacy Policy.
+        </p>
+        <div class="age-gate__actions">
+            <button id="age-yes" class="btn btn--primary btn--large">I am 18 or older — Enter</button>
+            <a href="https://www.google.com" class="btn btn--ghost btn--large">I am under 18 — Leave</a>
+        </div>
+        <p class="age-gate__disclaimer">
+            All members are verified adults. Consent-first approach. Discretion guaranteed.
+        </p>
+    </div>
+</div>
+
+<!-- ========== LOGIN MODAL ========== -->
+<div id="login-modal" class="modal">
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__content">
+        <button class="modal__close" data-close-modal aria-label="Close modal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="modal__tabs">
+            <button class="modal__tab active" data-tab="login">Login</button>
+            <button class="modal__tab" data-tab="register">Join Now</button>
+        </div>
+        <div id="tab-login" class="modal__panel active">
+            <h3 class="modal__title">Welcome Back</h3>
+            <form class="form" id="login-form">
+                <div class="form__group">
+                    <label class="form__label">Email</label>
+                    <input type="email" class="form__input" placeholder="your@email.com" required>
+                </div>
+                <div class="form__group">
+                    <label class="form__label">Password</label>
+                    <input type="password" class="form__input" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">Login</button>
+            </form>
+            <p class="modal__footer">New here? <a href="#" class="form__link" data-switch-tab="register">Create an account</a></p>
+        </div>
+        <div id="tab-register" class="modal__panel">
+            <h3 class="modal__title">Join Trades4Babes</h3>
+            <form class="form" id="register-form">
+                <div class="form__group">
+                    <label class="form__label">Display Name</label>
+                    <input type="text" class="form__input" placeholder="Your display name" required>
+                </div>
+                <div class="form__group">
+                    <label class="form__label">Email</label>
+                    <input type="email" class="form__input" placeholder="your@email.com" required>
+                </div>
+                <div class="form__group">
+                    <label class="form__label">Password</label>
+                    <input type="password" class="form__input" placeholder="Min 8 characters" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">Create Account</button>
+                <div class="promo-badge" style="margin-top: 16px; justify-content: center;">
+                    <span class="promo-badge__code">WELCOME26</span>
+                    <span class="promo-badge__text">First Month FREE</span>
+                </div>
+            </form>
+            <p class="modal__footer">Already a member? <a href="#" class="form__link" data-switch-tab="login">Login</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- ========== HEADER ========== -->
+<header class="header" id="header">
+    <div class="container header__container">
+        <a href="index.html" class="header__logo">
+            <img src="logo.png" alt="Trades4Babes" class="header__logo-img">
+        </a>
+        <nav class="header__nav" id="main-nav">
+            <a href="index.html" class="header__link">Home</a>
+            <a href="search.html" class="header__link">Search</a>
+            <a href="marketplace.html" class="header__link">Marketplace</a>
+            <a href="about.html" class="header__link active">About</a>
+        </nav>
+        <div class="header__actions">
+            <a href="#" class="btn btn--secondary btn--small" data-open-modal="login-modal" data-tab-trigger="register">Join Now</a>
+            <a href="#" class="btn btn--ghost btn--small" data-open-modal="login-modal" data-tab-trigger="login">Login</a>
+            <button class="header__menu-btn" id="menu-toggle" aria-label="Toggle menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav__overlay" id="mobile-nav-overlay"></div>
+    <div class="mobile-nav__panel">
+        <div class="mobile-nav__header">
+            <img src="logo.png" alt="Trades4Babes" class="mobile-nav__logo">
+            <button class="mobile-nav__close" id="mobile-nav-close" aria-label="Close menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav__links">
+            <a href="index.html" class="mobile-nav__link">Home</a>
+            <a href="search.html" class="mobile-nav__link">Search Members</a>
+            <a href="marketplace.html" class="mobile-nav__link">Trade Marketplace</a>
+            <a href="about.html" class="mobile-nav__link active">About</a>
+        </nav>
+        <div class="mobile-nav__actions">
+            <a href="#" class="btn btn--primary btn--full" data-open-modal="login-modal" data-tab-trigger="register">Join Now</a>
+            <a href="#" class="btn btn--ghost btn--full" data-open-modal="login-modal" data-tab-trigger="login">Login</a>
+        </div>
+    </div>
+</div>
+
+<!-- ========== ABOUT PAGE TITLE ========== -->
+<section class="page-title">
+    <div class="container">
+        <h1 class="page-title__heading">About Trades4Babes</h1>
+        <p class="page-title__desc">Australia's premium adult directory and trade services marketplace. Connecting verified members privately and securely since 2025.</p>
+    </div>
+</section>
+
+<!-- ========== ABOUT SECTIONS ========== -->
+<section class="section section--compact">
+    <div class="container">
+        <div class="about-card" id="about">
+            <h2 class="about-card__title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                Our Platform
+            </h2>
+            <p class="about-card__text">Trades4Babes is a premium, discreet platform designed for adults to connect privately for mutual exchanges. We combine an adult directory with a trade services marketplace, allowing verified members to negotiate services, discuss opportunities, and arrange mutually agreed terms.</p>
+            <p class="about-card__text">Whether you're offering or seeking trade services — plumbing, electrical, carpentry, IT, automotive, and more — or looking for companionship and connection, Trades4Babes provides a safe, secure, and private environment for consenting adults.</p>
+        </div>
+
+        <div class="about-card" id="safety">
+            <h2 class="about-card__title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                Safety & Verification
+            </h2>
+            <p class="about-card__text">Your safety is our top priority. Every member undergoes age verification before accessing the platform. We employ a consent-first approach, private messaging (no public contact details), and a comprehensive reporting system.</p>
+            <p class="about-card__text">All interactions are encrypted and private. Members can block users, report inappropriate behavior, and manage their privacy settings at any time. Our moderation team reviews reports promptly to maintain community standards.</p>
+        </div>
+
+        <div class="about-card" id="community">
+            <h2 class="about-card__title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                Community Philosophy
+            </h2>
+            <p class="about-card__text">Trades4Babes is built on mutual respect, consent, and discretion. We believe adults should have the freedom to connect and negotiate on their own terms in a safe, judgment-free environment. Harassment, discrimination, and non-consensual behavior are strictly prohibited.</p>
+        </div>
+
+        <!-- FAQ -->
+        <div class="about-card" id="faq">
+            <h2 class="about-card__title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                Frequently Asked Questions
+            </h2>
+
+            <div class="faq-item">
+                <button class="faq-item__question">
+                    Is Trades4Babes legal in Australia?
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-item__answer">Trades4Babes operates as a private membership platform for adults. We comply with all applicable Australian laws, including the Privacy Act 1988, Australian Consumer Law, and relevant state legislation. We do not facilitate illegal activities and all members must be verified adults aged 18 or older.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-item__question">
+                    How does verification work?
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-item__answer">All new members must verify their age via photo ID or video call. Verified members receive a verified badge on their profile. Premium and VIP members undergo additional verification steps for enhanced trust and priority placement.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-item__question">
+                    Is my privacy protected?
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-item__answer">Absolutely. We use industry-standard encryption for all data and communications. Your personal contact information is never displayed publicly. All messaging happens through our secure platform. You control what information is visible on your profile and can adjust privacy settings at any time.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-item__question">
+                    What payment methods are accepted?
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-item__answer">We accept major credit cards, debit cards, and PayPal for membership subscriptions. All payments are processed securely through Stripe with PCI compliance. Billing appears discreetly on your statement.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-item__question">
+                    Can I cancel my membership?
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-item__answer">Yes, you can cancel your subscription at any time from your account dashboard. Your access will continue until the end of your current billing period. We also offer a 7-day cooling-off period for new subscribers.</div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="about-card" id="contact">
+            <h2 class="about-card__title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                Contact Us
+            </h2>
+            <p class="about-card__text">Have questions or need assistance? Our support team is here to help. Fill out the form below or email us directly.</p>
+            <form class="contact-form" onsubmit="event.preventDefault(); showToast('Message sent! We will respond within 24 hours.', 'success');">
+                <div class="contact-form__row">
+                    <div class="form__group">
+                        <label class="form__label">Name</label>
+                        <input type="text" class="form__input" placeholder="Your name" required>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label">Email</label>
+                        <input type="email" class="form__input" placeholder="your@email.com" required>
+                    </div>
+                </div>
+                <div class="form__group">
+                    <label class="form__label">Subject</label>
+                    <input type="text" class="form__input" placeholder="How can we help?" required>
+                </div>
+                <div class="form__group">
+                    <label class="form__label">Message</label>
+                    <textarea class="form__input contact-form__textarea" placeholder="Your message..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Legal -->
+        <div class="about-card" id="terms">
+            <h2 class="about-card__title">Terms & Conditions</h2>
+            <div class="legal-content">
+                <p class="last-updated">Last updated: 1 July 2025</p>
+                <h3>1. Acceptance of Terms</h3>
+                <p>By accessing and using Trades4Babes, you agree to be bound by these Terms & Conditions. If you do not agree, you must not use this platform.</p>
+                <h3>2. Eligibility</h3>
+                <p>You must be at least 18 years of age to use this platform. By registering, you confirm that you are a legal adult and that viewing adult content is lawful in your jurisdiction.</p>
+                <h3>3. User Responsibilities</h3>
+                <p>Users are responsible for their own conduct and interactions. All arrangements are made independently between members. Trades4Babes is a platform for connection and does not guarantee any specific outcome or arrangement.</p>
+                <h3>4. Prohibited Conduct</h3>
+                <p>Harassment, abuse, fraud, underage content, non-consensual activities, and illegal conduct are strictly prohibited. Violations may result in immediate account termination and legal action.</p>
+                <h3>5. Content & Moderation</h3>
+                <p>We reserve the right to remove content that violates our guidelines. Members may report inappropriate content or behavior through our reporting system.</p>
+                <h3>6. Liability</h3>
+                <p>Trades4Babes is not liable for interactions between members. We provide a platform for connection but do not oversee or guarantee the nature of any exchange or arrangement.</p>
+            </div>
+        </div>
+
+        <div class="about-card" id="privacy">
+            <h2 class="about-card__title">Privacy Policy</h2>
+            <div class="legal-content">
+                <p class="last-updated">Last updated: 1 July 2025</p>
+                <h3>1. Information We Collect</h3>
+                <p>We collect information you provide during registration, including email, age verification documents, and profile information. We also collect usage data to improve the platform.</p>
+                <h3>2. How We Use Your Information</h3>
+                <p>Your information is used to provide platform services, verify identity, process payments, and communicate with you. We do not sell your personal data to third parties.</p>
+                <h3>3. Data Security</h3>
+                <p>We implement industry-standard encryption and security measures. All data is stored securely and access is restricted to authorized personnel only.</p>
+                <h3>4. Your Rights</h3>
+                <p>Under Australian privacy law, you have the right to access, correct, and delete your personal data. Contact us to exercise these rights.</p>
+            </div>
+        </div>
+
+        <div class="about-card" id="guidelines">
+            <h2 class="about-card__title">Community Guidelines</h2>
+            <div class="legal-content">
+                <p class="last-updated">Last updated: 1 July 2025</p>
+                <h3>1. Consent First</h3>
+                <p>All interactions must be consensual. Respect boundaries and communicate clearly. No means no, always.</p>
+                <h3>2. Respect & Dignity</h3>
+                <p>Treat all members with respect. Harassment, discrimination, hate speech, and abusive behavior will not be tolerated.</p>
+                <h3>3. Honesty</h3>
+                <p>Be truthful in your profile and communications. Misleading information, catfishing, and fraud are prohibited.</p>
+                <h3>4. Safety</h3>
+                <p>Meet in public when possible, inform someone of your plans, and trust your instincts. Report any suspicious behavior immediately.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__brand">
+                <img src="logo.png" alt="Trades4Babes" class="footer__logo">
+                <p class="footer__tagline">Premium adult directory & trade services marketplace.</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link" aria-label="Twitter">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Telegram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__heading">Platform</h4>
+                <ul class="footer__links">
+                    <li><a href="search.html" class="footer__link">Search Members</a></li>
+                    <li><a href="marketplace.html" class="footer__link">Trade Marketplace</a></li>
+                    <li><a href="index.html#membership" class="footer__link">Membership</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__heading">Company</h4>
+                <ul class="footer__links">
+                    <li><a href="about.html" class="footer__link">About Us</a></li>
+                    <li><a href="about.html#contact" class="footer__link">Contact</a></li>
+                    <li><a href="about.html#safety" class="footer__link">Safety</a></li>
+                    <li><a href="about.html#community" class="footer__link">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="about.html#terms" class="footer__link">Terms & Conditions</a></li>
+                    <li><a href="about.html#privacy" class="footer__link">Privacy Policy</a></li>
+                    <li><a href="about.html#guidelines" class="footer__link">Community Guidelines</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copy">© 2025 Trades4Babes. All rights reserved. Operated in compliance with Australian law.</p>
+            <div class="footer__badges">
+                <span class="footer__badge">18+ Only</span>
+                <span class="footer__badge">SSL Secured</span>
+                <span class="footer__badge">Privacy Protected</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="toast-container" id="toast-container"></div>
+<script src="scripts.js"></script>
+</body>
+</html>
